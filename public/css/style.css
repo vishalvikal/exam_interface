@@ -1,0 +1,325 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    background-color: #fff;
+    overflow: hidden; /* Prevent body scroll */
+}
+
+/* Header */
+.header {
+    height: 60px;
+    background-color: #3e3e3e;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.header-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.timer-container {
+    display: flex;
+    align-items: center;
+}
+
+.timer-label {
+    margin-right: 10px;
+    font-size: 12px;
+}
+
+.timer-box {
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 16px;
+    border: 1px solid #666;
+}
+
+.candidate-info {
+    display: flex;
+    align-items: center;
+}
+
+.candidate-img-small {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin-right: 10px;
+}
+
+/* Main Layout */
+.main-container {
+    display: flex;
+    height: calc(100% - 110px); /* Minus header and footer */
+}
+
+/* Left Panel - Question Area */
+.left-panel {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    border-right: 5px solid #e0e0e0;
+}
+
+.section-bar {
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+    padding: 0;
+    display: flex;
+}
+
+.section-tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #0072c6;
+    color: white;
+    font-weight: bold;
+    margin-right: 2px;
+}
+
+.section-tab.active {
+    background-color: #005a9e;
+}
+
+.section-tab:hover {
+    background-color: #005a9e;
+}
+
+.question-header {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: #cc3300;
+}
+
+.question-area {
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.question-text {
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.options-container {
+    margin-top: 10px;
+}
+
+.option-item {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.option-item input {
+    margin-top: 3px;
+    margin-right: 10px;
+}
+
+/* Right Panel - Palette */
+.right-panel {
+    width: 25%;
+    background-color: #f0f4f7;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #ccc;
+}
+
+.palette-header {
+    padding: 10px;
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+}
+
+.candidate-img-large {
+    width: 80px;
+    height: 80px;
+    background-color: #ccc;
+    margin-right: 10px;
+}
+
+.candidate-details {
+    font-size: 12px;
+}
+
+.palette-legend {
+    padding: 10px;
+    font-size: 11px;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #ccc;
+}
+
+.legend-item {
+    width: 50%;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.legend-icon {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    text-align: center;
+    line-height: 20px;
+    margin-right: 5px;
+    color: white;
+    font-size: 10px;
+}
+
+/* Palette Colors from TCS iON */
+.status-not-visited {
+    background-color: #e0e0e0;
+    color: black;
+    border: 1px solid #ccc;
+}
+
+.status-not-answered {
+    background-color: #c00;
+    color: white;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 50% 100%, 0% 85%); /* Approximate shape */
+    border-radius: 2px;
+}
+.status-not-answered-square {
+    background-color: #c00;
+    color: white;
+    border-radius: 2px;
+}
+
+
+.status-answered {
+    background-color: #00c000;
+    color: white;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 50% 100%, 0% 85%);
+    border-radius: 2px;
+}
+.status-answered-square {
+    background-color: #00c000;
+    color: white;
+    border-radius: 2px;
+}
+
+.status-marked {
+    background-color: #609;
+    color: white;
+    border-radius: 50%;
+}
+
+.status-marked-answered {
+    background-color: #609;
+    color: white;
+    border-radius: 50%;
+    position: relative;
+}
+.status-marked-answered::after {
+    content: '✓';
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    font-size: 8px;
+    background: #00c000;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    text-align: center;
+}
+
+.palette-grid {
+    padding: 10px;
+    flex-grow: 1;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    align-content: start;
+}
+
+.palette-btn {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: auto;
+}
+
+/* Footer */
+.footer {
+    height: 50px;
+    background-color: #f0f0f0;
+    border-top: 1px solid #ccc;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.btn-secondary {
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+.btn-secondary:hover {
+    background-color: #e6e6e6;
+}
+
+.btn-primary {
+    background-color: #28a745; /* TCS Save & Next is usually blue or green, choosing standard green here */
+    color: white;
+    border: 1px solid #1e7e34;
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+}
+
+.btn-info {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.btn-submit {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #0056b3;
+}
+
+/* Utilities */
+.hidden {
+    display: none !important;
+}
+
+.toolbar {
+    background: #e0e0e0;
+    padding: 5px;
+    text-align: right;
+    border-bottom: 1px solid #ccc;
+}

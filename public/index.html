@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Assessment</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/calculator.css">
+</head>
+<body>
+    <!-- Calculator Component (Hidden) -->
+    <div id="calculator-placeholder"></div>
+
+    <div class="header">
+        <div class="header-title">Chemistry (Periodic Table)</div>
+        <div class="timer-container">
+            <span class="timer-label">Time Left:</span>
+            <span id="timer" class="timer-box">00:00:00</span>
+        </div>
+        <div class="candidate-info">
+            <div class="candidate-img-small">
+                <img src="https://via.placeholder.com/40" alt="Candidate">
+            </div>
+            <span>John Doe</span>
+        </div>
+    </div>
+
+    <div class="toolbar">
+         <button class="btn btn-secondary" onclick="document.getElementById('calc-container').style.display='block'">Scientific Calculator</button>
+    </div>
+
+    <div class="main-container">
+        <!-- Left Panel: Question -->
+        <div class="left-panel">
+            <div class="section-bar" id="section-tabs">
+                <!-- Tabs will be injected here -->
+            </div>
+
+            <div class="question-header">
+                <div>Question No. <span id="q-num">1</span></div>
+                <div>Marks: +1, -0.25</div>
+            </div>
+
+            <div class="question-area">
+                <div class="question-text" id="question-text">
+                    Loading question...
+                </div>
+                <div class="options-container" id="options-container">
+                    <!-- Options injected here -->
+                </div>
+            </div>
+
+            <div class="footer">
+                <div>
+                    <button class="btn btn-secondary" onclick="exam.markForReview()">Mark for Review & Next</button>
+                    <button class="btn btn-secondary" onclick="exam.clearResponse()">Clear Response</button>
+                </div>
+                <button class="btn btn-primary" onclick="exam.saveAndNext()">Save & Next</button>
+            </div>
+        </div>
+
+        <!-- Right Panel: Palette -->
+        <div class="right-panel">
+            <div class="palette-header">
+                <div class="candidate-img-large">
+                    <img src="https://via.placeholder.com/80" alt="Candidate">
+                </div>
+                <div class="candidate-details">
+                    <div><strong>John Doe</strong></div>
+                </div>
+            </div>
+
+            <div class="palette-legend">
+                <div class="legend-item"><span class="legend-icon status-answered-square">0</span> Answered</div>
+                <div class="legend-item"><span class="legend-icon status-not-answered-square">0</span> Not Answered</div>
+                <div class="legend-item"><span class="legend-icon status-not-visited">0</span> Not Visited</div>
+                <div class="legend-item"><span class="legend-icon status-marked">0</span> Marked for Review</div>
+                <div class="legend-item"><span class="legend-icon status-marked-answered">0</span> Ans & Marked</div>
+            </div>
+
+            <div class="section-label" style="padding: 10px; font-weight: bold; background: #ddd;">
+                <span id="current-section-name">Section</span>
+            </div>
+
+            <div class="palette-grid" id="palette-grid">
+                <!-- Grid buttons injected here -->
+            </div>
+
+            <div style="padding: 10px; border-top: 1px solid #ccc; text-align: center;">
+                 <button class="btn btn-submit" onclick="exam.submitExam()">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/calculator.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // Load calculator HTML
+        fetch('calculator.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('calculator-placeholder').innerHTML = data;
+                if (window.initCalculator) {
+                    window.initCalculator();
+                }
+            });
+    </script>
+</body>
+</html>

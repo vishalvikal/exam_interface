@@ -1,0 +1,93 @@
+<div id="calc-container">
+    <div id="calc-header">
+        <span>Scientific Calculator</span>
+        <span id="calc-close" onclick="document.getElementById('calc-container').style.display='none'">X</span>
+    </div>
+    <div class="calc-body">
+        <input type="text" id="calc-screen" readonly value="0">
+        <div class="calc-radio-group">
+            <input type="radio" name="angle" id="deg" checked onchange="toggleAngle('deg')"> <label for="deg">Deg</label>
+            <input type="radio" name="angle" id="rad" onchange="toggleAngle('rad')"> <label for="rad">Rad</label>
+        </div>
+
+        <div class="calc-row">
+            <!-- Left Panel: Scientific Functions -->
+            <div class="calc-left-panel calc-grid">
+                <!-- Row 1 -->
+                <button class="calc-btn function" onclick="calcInput('mod')">mod</button>
+                <button class="calc-btn function" onclick="calcInput('(')">(</button>
+                <button class="calc-btn function" onclick="calcInput(')')">)</button>
+                <button class="calc-btn" onclick="calcInput('back')">←</button>
+                <button class="calc-btn function" onclick="calcInput('pi')">π</button>
+
+                <!-- Row 2 -->
+                <button class="calc-btn function" onclick="calcInput('sinh')">sinh</button>
+                <button class="calc-btn function" onclick="calcInput('cosh')">cosh</button>
+                <button class="calc-btn function" onclick="calcInput('tanh')">tanh</button>
+                <button class="calc-btn function" onclick="calcInput('exp(')">Exp</button>
+                <button class="calc-btn function" onclick="calcInput('^')">x^y</button>
+
+                <!-- Row 3 -->
+                <button class="calc-btn function" onclick="calcInput('sinh-1')">sinh⁻¹</button>
+                <button class="calc-btn function" onclick="calcInput('cosh-1')">cosh⁻¹</button>
+                <button class="calc-btn function" onclick="calcInput('tanh-1')">tanh⁻¹</button>
+                <button class="calc-btn function" onclick="calcInput('log2(')">log₂x</button>
+                <button class="calc-btn function" onclick="calcInput('ln(')">ln</button>
+
+                <!-- Row 4 -->
+                <button class="calc-btn function" onclick="calcInput('log(')">log</button>
+                <button class="calc-btn function" onclick="calcInput('fact(')">n!</button>
+                <button class="calc-btn function" onclick="calcInput('10^')">10ˣ</button>
+                <button class="calc-btn function" onclick="calcInput('sqr')">x²</button>
+                <button class="calc-btn function" onclick="calcInput('cube')">x³</button>
+
+                 <!-- Row 5 -->
+                <button class="calc-btn function" onclick="calcInput('sin(')">sin</button>
+                <button class="calc-btn function" onclick="calcInput('cos(')">cos</button>
+                <button class="calc-btn function" onclick="calcInput('tan(')">tan</button>
+                <button class="calc-btn function" onclick="calcInput('1/')">1/x</button>
+                <button class="calc-btn function" onclick="calcInput('sqrt(')">√</button>
+
+                 <!-- Row 6 -->
+                <button class="calc-btn function" onclick="calcInput('asin(')">sin⁻¹</button>
+                <button class="calc-btn function" onclick="calcInput('acos(')">cos⁻¹</button>
+                <button class="calc-btn function" onclick="calcInput('atan(')">tan⁻¹</button>
+                <button class="calc-btn function" onclick="calcInput('cbrt(')">∛</button>
+                <button class="calc-btn function" onclick="calcInput('abs(')">|x|</button>
+            </div>
+
+            <!-- Right Panel: Numpad and Basic Ops -->
+            <div class="calc-right-panel calc-numpad">
+                <button class="calc-btn memory" onclick="calcInput('MC')">MC</button>
+                <button class="calc-btn memory" onclick="calcInput('MR')">MR</button>
+                <button class="calc-btn memory" onclick="calcInput('MS')">MS</button>
+                <button class="calc-btn memory" onclick="calcInput('M+')">M+</button>
+                <button class="calc-btn memory" onclick="calcInput('M-')">M-</button>
+
+                <button class="calc-btn number" onclick="calcInput('7')">7</button>
+                <button class="calc-btn number" onclick="calcInput('8')">8</button>
+                <button class="calc-btn number" onclick="calcInput('9')">9</button>
+                <button class="calc-btn operator" onclick="calcInput('/')">/</button>
+                <button class="calc-btn operator" onclick="calcInput('%')">%</button>
+
+                <button class="calc-btn number" onclick="calcInput('4')">4</button>
+                <button class="calc-btn number" onclick="calcInput('5')">5</button>
+                <button class="calc-btn number" onclick="calcInput('6')">6</button>
+                <button class="calc-btn operator" onclick="calcInput('*')">*</button>
+                <button class="calc-btn operator" onclick="calcInput('1/x')">1/x</button>
+
+                <button class="calc-btn number" onclick="calcInput('1')">1</button>
+                <button class="calc-btn number" onclick="calcInput('2')">2</button>
+                <button class="calc-btn number" onclick="calcInput('3')">3</button>
+                <button class="calc-btn operator" onclick="calcInput('-')">-</button>
+                <button class="calc-btn operator" onclick="calcInput('=')">=</button>
+
+                <button class="calc-btn number" onclick="calcInput('0')">0</button>
+                <button class="calc-btn number" onclick="calcInput('.')">.</button>
+                <button class="calc-btn function" onclick="calcInput('+/-')">+/-</button>
+                <button class="calc-btn operator" onclick="calcInput('+')">+</button>
+                <button class="calc-btn operator" onclick="calcInput('=')">=</button>
+            </div>
+        </div>
+    </div>
+</div>

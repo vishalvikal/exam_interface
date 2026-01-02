@@ -1,0 +1,128 @@
+{
+  "examName": "Chemistry (Periodic Table)",
+  "durationSeconds": 3600,
+  "sections": [
+    {
+      "id": "sec1",
+      "name": "Gases",
+      "questions": [
+        {
+          "id": "q1_1",
+          "text": "Which of the following is NOT a property of an ideal gas?",
+          "options": [
+            "Collisions between molecules are perfectly elastic",
+            "There are no intermolecular forces of attraction",
+            "The volume occupied by the molecules is negligible",
+            "Gas molecules move in fixed, circular orbits"
+          ],
+          "correctAnswer": 3
+        },
+        {
+          "id": "q1_2",
+          "text": "According to Boyle's Law, at constant temperature, the volume of a given mass of gas is:",
+          "options": [
+            "Directly proportional to its pressure",
+            "Inversely proportional to its pressure",
+            "Directly proportional to the square of its pressure",
+            "Independent of its pressure"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q1_3",
+          "text": "What is the value of the universal gas constant R in J/(mol·K)?",
+          "options": [
+            "0.0821",
+            "8.314",
+            "1.987",
+            "62.36"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q1_4",
+          "text": "Which gas law relates volume and temperature at constant pressure?",
+          "options": [
+            "Boyle's Law",
+            "Charles's Law",
+            "Avogadro's Law",
+            "Gay-Lussac's Law"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q1_5",
+          "text": "Real gases show deviation from ideal behavior at:",
+          "options": [
+            "High temperature and low pressure",
+            "High temperature and high pressure",
+            "Low temperature and high pressure",
+            "Low temperature and low pressure"
+          ],
+          "correctAnswer": 2
+        }
+      ]
+    },
+    {
+      "id": "sec2",
+      "name": "The p-Block Elements",
+      "questions": [
+        {
+          "id": "q2_1",
+          "text": "Which group of the periodic table contains the p-block elements?",
+          "options": [
+            "Group 1 and 2",
+            "Group 3 to 12",
+            "Group 13 to 18",
+            "Lanthanides and Actinides"
+          ],
+          "correctAnswer": 2
+        },
+        {
+          "id": "q2_2",
+          "text": "Which of the following elements is a noble gas?",
+          "options": [
+            "Chlorine",
+            "Oxygen",
+            "Argon",
+            "Nitrogen"
+          ],
+          "correctAnswer": 2
+        },
+        {
+          "id": "q2_3",
+          "text": "The most electronegative element in the p-block (and entire periodic table) is:",
+          "options": [
+            "Oxygen",
+            "Fluorine",
+            "Chlorine",
+            "Nitrogen"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q2_4",
+          "text": "Which of the following is an amphoteric oxide?",
+          "options": [
+            "Na2O",
+            "SO2",
+            "Al2O3",
+            "CaO"
+          ],
+          "correctAnswer": 2
+        },
+        {
+          "id": "q2_5",
+          "text": "The inert pair effect is most pronounced in:",
+          "options": [
+            "Boron",
+            "Aluminum",
+            "Gallium",
+            "Thallium"
+          ],
+          "correctAnswer": 3
+        }
+      ]
+    }
+  ]
+}
