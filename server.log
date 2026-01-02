@@ -7,3 +7,10 @@ GET /js/calculator.js
 GET /js/script.js
 GET /calculator.html
 GET /data/questions.json
+GET /
+GET /css/style.css
+GET /css/calculator.css
+GET /js/calculator.js
+GET /js/script.js
+GET /calculator.html
+GET /data/questions/questions.json

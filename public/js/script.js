@@ -19,7 +19,7 @@ class ExamSystem {
 
     async init() {
         try {
-            const response = await fetch('data/questions.json');
+            const response = await fetch('data/questions/questions.json');
             this.examData = await response.json();
             this.remainingTime = this.examData.durationSeconds;
 
